@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BusinessOrderManager.Models;
 using BusinessOrderManager.Repositories;
 using BusinessOrderManager.Services;
+using BusinessOrderManager.Interfaces;
 
 namespace BusinessOrderManager
 {
@@ -21,8 +22,8 @@ namespace BusinessOrderManager
             Repository<Client> clientRepository = new Repository<Client>();
             Repository<Order> orderRepository = new Repository<Order>();
 
-            ClientService clientService = new ClientService(clientRepository, orderRepository);
-            OrderService orderService = new OrderService(orderRepository, clientRepository);
+            IClientService clientService = new ClientService(clientRepository, orderRepository);
+            IOrderService orderService = new OrderService(orderRepository, clientRepository);
 
             Client invalidClient = new Client
             {

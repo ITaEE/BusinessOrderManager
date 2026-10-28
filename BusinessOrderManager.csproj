@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IClientService.cs" />
     <Compile Include="Interfaces\IIdentifiable.cs" />
+    <Compile Include="Interfaces\IOrderService.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Entity.cs" />

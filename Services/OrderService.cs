@@ -9,7 +9,7 @@ using BusinessOrderManager.Interfaces;
 
 namespace BusinessOrderManager.Services
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly IRepository<Order> _orderRepository;
         private readonly IRepository<Client> _clientRepository;
