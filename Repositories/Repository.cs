@@ -7,7 +7,7 @@ using BusinessOrderManager.Interfaces;
 
 namespace BusinessOrderManager.Repositories
 {
-    public class Repository<T> where T : IIdentifiable
+    public class Repository<T> : IRepository<T> where T : IIdentifiable
     {
         private List<T> _items = new List<T>();
 

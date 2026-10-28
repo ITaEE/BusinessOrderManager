@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessOrderManager.Models;
 using BusinessOrderManager.Repositories;
+using BusinessOrderManager.Interfaces;
 
 namespace BusinessOrderManager.Services
 {
     public class OrderService
     {
-        private readonly Repository<Order> _orderRepository;
-        private readonly Repository<Client> _clientRepository;
-        public OrderService(Repository<Order> orderRepository, Repository<Client> clientRepository)
+        private readonly IRepository<Order> _orderRepository;
+        private readonly IRepository<Client> _clientRepository;
+        public OrderService(IRepository<Order> orderRepository, IRepository<Client> clientRepository)
         {
             _orderRepository = orderRepository;
             _clientRepository = clientRepository;
